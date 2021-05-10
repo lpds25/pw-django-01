@@ -1,0 +1,22 @@
+{% extends 'pw/base.html' %}
+
+{% block main %}
+    <h3>Introdução</h3>
+
+    {{ agora }}
+    {% if hora < 12 %}
+        <p>Bom dia, são {{ hora }} horas.</p>
+    {% else %}
+        <p>Boa tarde, são {{ hora }} horas.</p>
+    {% endif %}
+
+    <p>Aplicações Web criativas para perfeccionistas com deadlines.</p>
+    <p>Nesta cadeira já falámos de:</p>
+    <ul>
+    {% for item in lista %}
+        <li>{{ item }}</li>
+    {% endfor %}
+    </ul>
+
+
+{% endblock %}
